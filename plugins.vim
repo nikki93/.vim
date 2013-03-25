@@ -52,3 +52,5 @@ let g:SuperTabDefaultCompletionType="context"
 let g:SuperTabContextDefaultCompletionType="<C-x><C-o>"
 let g:SuperTabLongestEnhanced=1
 
+" syntastic
+Bundle 'scrooloose/syntastic'
