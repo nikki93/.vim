@@ -33,13 +33,11 @@ map <F11> :NERDTree<CR> :vertical resize 23<CR>
 
 " ctrlp
 Bundle 'kien/ctrlp.vim'
-let g:ctrlp_map = ',f'
 let g:ctrlp_extensions = ['tag', 'quickfix', 'line', 'changes', 'bookmarkdir']
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
-let g:ctrlp_working_path_mode = 0
 let g:ctrlp_dotfiles = 0
-let g:ctrlp_switch_buffer = 0
+let g:ctrlp_map = ',f'
 nmap ; :CtrlPBuffer<CR>
 nmap ,t :CtrlPTag<CR>
 
