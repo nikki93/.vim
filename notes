@@ -2,4 +2,6 @@ todo
 ----
 
 - get a code completion plugin
+   - clang_complete/omnicppcomplete for c/c++
+   - jedi-vim for python
 
