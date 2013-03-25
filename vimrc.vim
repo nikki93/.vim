@@ -12,6 +12,7 @@ set ignorecase
 set nowrap
 set incsearch
 set nocompatible
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " code
 filetype plugin on

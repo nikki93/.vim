@@ -43,3 +43,12 @@ let g:ctrlp_switch_buffer = 0
 nmap ; :CtrlPBuffer<CR>
 nmap ,t :CtrlPTag<CR>
 
+" clang_complete
+Bundle 'Rip-Rip/clang_complete'
+
+" supertab
+Bundle 'ervandew/supertab'
+let g:SuperTabDefaultCompletionType="context"
+let g:SuperTabContextDefaultCompletionType="<C-x><C-o>"
+let g:SuperTabLongestEnhanced=1
+
