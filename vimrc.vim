@@ -1,6 +1,10 @@
+" ',' leader (do this early)
+let g:mapleader=","
+
 " per-directory config
 set exrc
 set secure
+
 
 " plugins (do this early)
 source ~/.vim/plugins.vim
@@ -49,7 +53,7 @@ map <C-CR> :!urxvt &<CR><CR>
 map <F10> :make -j5 CXX="ccache g++" CONFIG=Debug
 map <F12> :make -j5 CXX="ccache g++" CONFIG=Release
 
-map ,p :set tags+=~/Development/Tags/
+map <Leader>p :set tags+=~/Development/Tags/
 
 " keyboard menu
 source $VIMRUNTIME/menu.vim
@@ -59,6 +63,6 @@ set wcm=<C-Z>
 map <F4> :emenu <C-Z>
 
 " colorscheme (set after loading colors plugin)
-colors hemisu
 set background=dark
+colors hemisu
 
