@@ -10,7 +10,7 @@ set secure
 source ~/.vim/plugins.vim
 
 " ui
-set guifont=Mensch\ 6
+set guifont=Mensch\ 9
 set guioptions=
 set ignorecase
 set nowrap
