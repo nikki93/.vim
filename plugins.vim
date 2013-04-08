@@ -64,6 +64,8 @@ let g:SuperTabLongestEnhanced = 1
 
 " syntastic
 Bundle 'scrooloose/syntastic'
+let g:syntastic_mode_map = { 'mode': 'active',
+            \ 'passive_filetypes': ['tex', 'html'] }
 
 " nerdcommenter
 Bundle 'scrooloose/nerdcommenter'
