@@ -3,5 +3,5 @@
 # ignore all bundles except vundle itself
 bundle/*
 bundle/*/
-!bundle/vundle/
+!bundle/vundle
 
