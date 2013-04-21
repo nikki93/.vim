@@ -24,6 +24,7 @@ filetype plugin indent on
 syntax on
 set completeopt=longest,menuone,preview
 set sw=4
+set tw=69
 set expandtab
 set cindent
 set fdm=marker
