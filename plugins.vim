@@ -77,3 +77,6 @@ let g:EasyMotion_leader_key = ';'
 " csapprox
 Bundle 'godlygeek/csapprox'
 
+" gitgutter
+Bundle 'airblade/vim-gitgutter'
+
