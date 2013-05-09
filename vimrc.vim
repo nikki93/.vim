@@ -24,7 +24,7 @@ filetype plugin indent on
 syntax on
 set completeopt=longest,menuone,preview
 set sw=4
-set tw=69
+"set tw=69
 set expandtab
 set cindent
 set fdm=marker
@@ -49,6 +49,9 @@ map <C-h> <C-w>h
 map <C-l> <C-w>l
 map <C-e> :vert split<CR>
 map <C-a> :split<CR>
+
+nnoremap <C-i> <C-o>
+nnoremap <C-o> <Tab>
 
 map <C-CR> :!urxvt &<CR><CR>
 map <F10> :make -j5 CXX="ccache g++" CONFIG=Debug

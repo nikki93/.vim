@@ -1,4 +1,5 @@
 *.swp
+*.pyc
 
 # ignore all bundles except vundle itself
 bundle/*
