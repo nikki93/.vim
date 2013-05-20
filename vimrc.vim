@@ -36,10 +36,10 @@ map k gk
 map j gj
 
 map <F1>  :bprevious<CR>
-map <C-p>  :bprevious<CR>
+map <C-p> :bprevious<CR>
 map <F2>  :bnext<CR>
-map <C-n>  :bnext<CR>
-map <C-x> :bp<CR> :bd # <CR>
+map <C-n> :bnext<CR>
+map <C-x> :bp<CR>:bd #<CR>
 map <C-s> :w<CR>
 map <C-q> :q<CR>
 
@@ -54,10 +54,12 @@ nnoremap <C-i> <C-o>
 nnoremap <C-o> <Tab>
 
 map <C-CR> :!urxvt &<CR><CR>
-map <F10> :make -j5 CXX="ccache g++" CONFIG=Debug
-map <F12> :make -j5 CXX="ccache g++" CONFIG=Release
+map <F10> :make -j5 CXX="ccache g++" config=debug
+map <F12> :make -j5 CXX="ccache g++" config=release
 
 map <Leader>p :set tags+=~/Development/Tags/
+
+noremap <silent> <leader>sb :<C-u>let @z=&so<CR>:set so=0 noscb<CR>:bo vs<CR>Ljzt:setl scb<CR><C-w>p:setl scb<CR>:let &so=@z<CR>
 
 " keyboard menu
 source $VIMRUNTIME/menu.vim

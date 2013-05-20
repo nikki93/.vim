@@ -34,14 +34,16 @@ Bundle 'gmarik/vundle'
 " ----------------------------------------------------------------------------
 
 " minibufexpl
-Bundle 'fholgado/minibufexpl.vim'
-let g:miniBufExplMapWindowNavVim = 1
+"Bundle 'fholgado/minibufexpl.vim'
+"let g:miniBufExplMapWindowNavVim = 1
+"let g:miniBufExplCheckDupeBufs = 1
 
 " nerdtree
 Bundle 'scrooloose/nerdtree'
 let NERDTreeIgnore = ['\.o$']
-let NERDTreeDirArrows = 0
-map <F11> :NERDTree<CR> :vertical resize 23<CR>
+let NERDTreeDirArrows = 1
+let NERDTreeMinimalUI = 1
+map <F11> :NERDTree<CR>:vertical resize 23<CR>
 
 " ctrlp
 Bundle 'kien/ctrlp.vim'
@@ -51,29 +53,23 @@ let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(
 let g:ctrlp_dotfiles = 0
 let g:ctrlp_map = ',f'
 let g:ctrlp_working_path_mode = 0
+nmap <Space> :CtrlP<CR>
 nmap <Leader>b :CtrlPBuffer<CR>
 nmap <Leader>t :CtrlPTag<CR>
-
-" clang_complete
-"Bundle 'Rip-Rip/clang_complete'
 
 " youcompleteme
 Bundle 'Valloric/YouCompleteMe'
 let g:ycm_global_ycm_extra_conf='~/.vim/ycm_extra_conf.py'
+nnoremap <C-w><C-\> :split<CR>:YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <C-\> :YcmCompleter GoToDefinitionElseDeclaration<CR>
-
-" supertab
-"Bundle 'ervandew/supertab'
-"let g:SuperTabDefaultCompletionType = "context"
-"let g:SuperTabContextDefaultCompletionType = "<C-x><C-o>"
-"let g:SuperTabLongestEnhanced = 1
+let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1 }
 
 " syntastic
 Bundle 'scrooloose/syntastic'
 let g:syntastic_mode_map = { 'mode': 'active',
             \ 'passive_filetypes': ['tex', 'html'] }
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
 
 " nerdcommenter
 Bundle 'scrooloose/nerdcommenter'
@@ -87,4 +83,12 @@ Bundle 'godlygeek/csapprox'
 
 " gitgutter
 Bundle 'airblade/vim-gitgutter'
+
+" fugitive
+Bundle 'tpope/vim-fugitive'
+nnoremap gs :Gstatus<CR>
+nnoremap gc :Gcommit
+nnoremap gp :Git push<CR>
+
+
 
