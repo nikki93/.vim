@@ -30,6 +30,7 @@ Bundle 'gmarik/vundle'
 "     easymotion           - high speed text motions
 "     csapprox             - approximating gvim colorschemes in vim
 "     gitgutter            - approximating gvim colorschemes in vim
+"     fugitive             - integrate git
 "
 " ----------------------------------------------------------------------------
 
@@ -41,7 +42,7 @@ Bundle 'gmarik/vundle'
 " nerdtree
 Bundle 'scrooloose/nerdtree'
 let NERDTreeIgnore = ['\.o$']
-let NERDTreeDirArrows = 1
+let NERDTreeDirArrows = 0
 let NERDTreeMinimalUI = 1
 map <F11> :NERDTree<CR>:vertical resize 23<CR>
 
@@ -89,6 +90,4 @@ Bundle 'tpope/vim-fugitive'
 nnoremap gs :Gstatus<CR>
 nnoremap gc :Gcommit
 nnoremap gp :Git push<CR>
-
-
 
