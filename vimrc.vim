@@ -72,3 +72,5 @@ map <F4> :emenu <C-Z>
 set background=dark
 colors hemisu
 
+" syntax
+au BufRead,BufNewFile *.as set syntax=cpp "angelscript
