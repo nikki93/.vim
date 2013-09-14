@@ -28,7 +28,6 @@ Bundle 'gmarik/vundle'
 "     syntastic            - highlight code errors on the fly
 "     nerdcommenter        - smart commenting
 "     easymotion           - high speed text motions
-"     csapprox             - approximating gvim colorschemes in vim
 "     gitgutter            - approximating gvim colorschemes in vim
 "     fugitive             - integrate git
 "
@@ -78,9 +77,6 @@ Bundle 'scrooloose/nerdcommenter'
 " easymotion
 Bundle 'Lokaltog/vim-easymotion'
 let g:EasyMotion_leader_key = ';'
-
-" csapprox
-Bundle 'godlygeek/csapprox'
 
 " gitgutter
 Bundle 'airblade/vim-gitgutter'
