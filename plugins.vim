@@ -62,13 +62,14 @@ Bundle 'Valloric/YouCompleteMe'
 let g:ycm_global_ycm_extra_conf='~/.vim/ycm_extra_conf.py'
 nnoremap <C-w><C-\> :split<CR>:YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <C-\> :YcmCompleter GoToDefinitionElseDeclaration<CR>
-let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1 }
+let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1 , 'ocaml': 1 }
 
 " syntastic
 Bundle 'scrooloose/syntastic'
 let g:syntastic_mode_map = { 'mode': 'active',
             \ 'passive_filetypes': ['tex', 'html'] }
 let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_ocaml_checkers = ['merlin']
 "let g:syntastic_auto_loc_list = 1
 
 " nerdcommenter
