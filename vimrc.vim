@@ -16,6 +16,7 @@ set ignorecase
 set nowrap
 set incsearch
 set nocompatible
+set colorcolumn=80
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " code
