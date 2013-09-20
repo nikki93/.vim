@@ -77,7 +77,7 @@ colors hemisu
 au BufRead,BufNewFile *.as set syntax=cpp "angelscript
 
 " ocaml merlin, ocp-indent
-set rtp+=~/.opam/4.00.1/share/ocamlmerlin/vim
-set rtp+=~/.opam/4.00.1/share/ocamlmerlin/vimbufsync
-autocmd FileType ocaml source /home/nikki/.opam/4.00.1/share/typerex/ocp-indent/ocp-indent.vim
+set rtp+=~/.opam/system/share/ocamlmerlin/vim
+set rtp+=~/.opam/system/share/ocamlmerlin/vimbufsync
+autocmd FileType ocaml source /Users/nikki/.opam/system/share/typerex/ocp-indent/ocp-indent.vim
 
