@@ -25,23 +25,21 @@ Bundle 'gmarik/vundle'
 "     nerdtree             - file tree explorer
 "     ctrlp                - quick open files with subsequence search
 "     youcompleteme        - fast autocompletion
+"     omnisharp            - c# autocompletion etc.
 "     syntastic            - highlight code errors on the fly
 "     nerdcommenter        - smart commenting
 "     easymotion           - high speed text motions
 "     gitgutter            - approximating gvim colorschemes in vim
-"     fugitive             - integrate git
 "
 " ----------------------------------------------------------------------------
 
 " minibufexpl
-"Bundle 'fholgado/minibufexpl.vim'
-"let g:miniBufExplMapWindowNavVim = 1
-"let g:miniBufExplCheckDupeBufs = 1
+Bundle 'fholgado/minibufexpl.vim'
 
 " nerdtree
 Bundle 'scrooloose/nerdtree'
 let NERDTreeIgnore = ['\.o$']
-let NERDTreeDirArrows = 0
+"let NERDTreeDirArrows = 0
 let NERDTreeMinimalUI = 1
 map <F11> :NERDTree<CR>:vertical resize 23<CR>
 
@@ -62,7 +60,11 @@ Bundle 'Valloric/YouCompleteMe'
 let g:ycm_global_ycm_extra_conf='~/.vim/ycm_extra_conf.py'
 nnoremap <C-w><C-\> :split<CR>:YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <C-\> :YcmCompleter GoToDefinitionElseDeclaration<CR>
-let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1 , 'ocaml': 1 }
+let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1 , 'cs': 1, 'ocaml': 1 }
+
+" omnisharp
+Bundle "nosami/Omnisharp"
+Bundle "tpope/vim-dispatch"
 
 " syntastic
 Bundle 'scrooloose/syntastic'
@@ -81,10 +83,4 @@ let g:EasyMotion_leader_key = ';'
 
 " gitgutter
 Bundle 'airblade/vim-gitgutter'
-
-" fugitive
-Bundle 'tpope/vim-fugitive'
-nnoremap gs :Gstatus<CR>
-nnoremap gc :Gcommit
-nnoremap gp :Git push<CR>
 
