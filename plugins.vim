@@ -34,11 +34,11 @@ Bundle 'gmarik/vundle'
 " ----------------------------------------------------------------------------
 
 " minibufexpl
-Bundle 'fholgado/minibufexpl.vim'
+"Bundle 'fholgado/minibufexpl.vim'
 
 " nerdtree
 Bundle 'scrooloose/nerdtree'
-let NERDTreeIgnore = ['\.o$']
+let NERDTreeIgnore = ['\.o$', '\.meta$']
 "let NERDTreeDirArrows = 0
 let NERDTreeMinimalUI = 1
 map <F11> :NERDTree<CR>:vertical resize 23<CR>
