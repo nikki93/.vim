@@ -69,7 +69,7 @@ Bundle "tpope/vim-dispatch"
 " syntastic
 Bundle 'scrooloose/syntastic'
 let g:syntastic_mode_map = { 'mode': 'active',
-            \ 'passive_filetypes': ['tex', 'html'] }
+            \ 'passive_filetypes': ['html'] }
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_ocaml_checkers = ['merlin']
 "let g:syntastic_auto_loc_list = 1
@@ -84,3 +84,11 @@ let g:EasyMotion_leader_key = ';'
 " gitgutter
 Bundle 'airblade/vim-gitgutter'
 
+" latex-box
+Bundle 'LaTeX-Box-Team/LaTeX-Box'
+let g:LatexBox_latexmk_options = "-pdflatex='pdflatex -synctex=1 \%O \%S'"
+let g:LatexBox_quickfix = 1
+map <silent> <Leader>ls :silent
+        \ !~/Applications/Skim.app/Contents/SharedSupport/displayline
+        \ <C-R>=line('.')<CR> "<C-R>=LatexBox_GetOutputFile()<CR>"
+        \ "%:p" <CR>
