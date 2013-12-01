@@ -20,21 +20,6 @@ Bundle 'gmarik/vundle'
 " ----------------------------------------------------------------------------
 " bundles
 " ----------------------------------------------------------------------------
-"
-"     minibufexpl          - buffer list like tabs
-"     nerdtree             - file tree explorer
-"     ctrlp                - quick open files with subsequence search
-"     youcompleteme        - fast autocompletion
-"     omnisharp            - c# autocompletion etc.
-"     syntastic            - highlight code errors on the fly
-"     nerdcommenter        - smart commenting
-"     easymotion           - high speed text motions
-"     gitgutter            - approximating gvim colorschemes in vim
-"
-" ----------------------------------------------------------------------------
-
-" minibufexpl
-"Bundle 'fholgado/minibufexpl.vim'
 
 " nerdtree
 Bundle 'scrooloose/nerdtree'
@@ -56,11 +41,12 @@ nmap <Leader>b :CtrlPBuffer<CR>
 nmap <Leader>t :CtrlPTag<CR>
 
 " youcompleteme
-Bundle 'Valloric/YouCompleteMe'
-let g:ycm_global_ycm_extra_conf='~/.vim/ycm_extra_conf.py'
-nnoremap <C-w><C-\> :split<CR>:YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <C-\> :YcmCompleter GoToDefinitionElseDeclaration<CR>
-let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1 , 'cs': 1, 'ocaml': 1 }
+"Bundle 'Valloric/YouCompleteMe'
+""let g:ycm_extra_conf_vim_data=['&filetype']
+""let g:ycm_global_ycm_extra_conf='~/.vim/ycm_extra_conf.py'
+"nnoremap <C-w><C-\> :split<CR>:YcmCompleter GoToDefinitionElseDeclaration<CR>
+"nnoremap <C-\> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1 , 'cs': 1, 'ocaml': 1, 'java': 1 }
 
 " omnisharp
 Bundle "nosami/Omnisharp"
@@ -77,10 +63,6 @@ let g:syntastic_ocaml_checkers = ['merlin']
 " nerdcommenter
 Bundle 'scrooloose/nerdcommenter'
 
-" easymotion
-Bundle 'Lokaltog/vim-easymotion'
-let g:EasyMotion_leader_key = ';'
-
 " gitgutter
 Bundle 'airblade/vim-gitgutter'
 
@@ -92,3 +74,7 @@ map <silent> <Leader>ls :silent
         \ !~/Applications/Skim.app/Contents/SharedSupport/displayline
         \ <C-R>=line('.')<CR> "<C-R>=LatexBox_GetOutputFile()<CR>"
         \ "%:p" <CR>
+
+" vim-markdown
+Bundle 'tpope/vim-markdown'
+

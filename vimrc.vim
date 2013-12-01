@@ -17,7 +17,7 @@ set ignorecase
 set nowrap
 set incsearch
 set nocompatible
-set colorcolumn=80
+" set colorcolumn=80
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " code
@@ -81,4 +81,10 @@ au BufRead,BufNewFile *.as set syntax=cpp "angelscript
 set rtp+=~/.opam/system/share/ocamlmerlin/vim
 set rtp+=~/.opam/system/share/ocamlmerlin/vimbufsync
 autocmd FileType ocaml source /Users/nikki/.opam/system/share/typerex/ocp-indent/ocp-indent.vim
+
+" eclim
+let g:EclimCompletionMethod = 'omnifunc'
+
+" color only bad column
+call matchadd('ColorColumn', '\%81v', 100)
 
