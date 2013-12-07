@@ -42,8 +42,8 @@ nmap <Leader>t :CtrlPTag<CR>
 
 " youcompleteme
 "Bundle 'Valloric/YouCompleteMe'
-""let g:ycm_extra_conf_vim_data=['&filetype']
-""let g:ycm_global_ycm_extra_conf='~/.vim/ycm_extra_conf.py'
+"let g:ycm_extra_conf_vim_data=['&filetype']
+"let g:ycm_global_ycm_extra_conf='~/.vim/ycm_extra_conf.py'
 "nnoremap <C-w><C-\> :split<CR>:YcmCompleter GoToDefinitionElseDeclaration<CR>
 "nnoremap <C-\> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 "let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1 , 'cs': 1, 'ocaml': 1, 'java': 1 }
@@ -51,6 +51,9 @@ nmap <Leader>t :CtrlPTag<CR>
 " omnisharp
 Bundle "nosami/Omnisharp"
 Bundle "tpope/vim-dispatch"
+
+" jedi-vim
+Bundle "davidhalter/jedi-vim"
 
 " syntastic
 Bundle 'scrooloose/syntastic'

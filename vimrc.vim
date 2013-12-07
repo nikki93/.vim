@@ -5,6 +5,14 @@ let g:mapleader=","
 set exrc
 set secure
 
+" blender autocomplete
+if has('python')
+py << EOF
+import sys
+sys.path.insert(0, '/Users/nikki/Development/bge-api')
+EOF
+endif
+
 
 " plugins (do this early)
 source ~/.vim/plugins.vim
@@ -76,6 +84,7 @@ colors hemisu
 
 " syntax
 au BufRead,BufNewFile *.as set syntax=cpp "angelscript
+au BufRead,BufNewFile *.angelscript set syntax=cpp "angelscript
 
 " ocaml merlin, ocp-indent
 set rtp+=~/.opam/system/share/ocamlmerlin/vim
