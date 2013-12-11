@@ -25,8 +25,8 @@ set ignorecase
 set nowrap
 set incsearch
 set nocompatible
-" set colorcolumn=80
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+set colorcolumn=80
+" autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " code
 filetype plugin on
@@ -94,6 +94,18 @@ autocmd FileType ocaml source /Users/nikki/.opam/system/share/typerex/ocp-indent
 " eclim
 let g:EclimCompletionMethod = 'omnifunc'
 
-" color only bad column
-call matchadd('ColorColumn', '\%81v', 100)
+" use tab/shift-tab for prev/next match
+function! InsertTabWrapper()
+  if pumvisible()
+    return "\<c-n>"
+  endif
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-x>\<c-o>"
+  endif
+endfunction
+inoremap <expr><tab> InsertTabWrapper()
+inoremap <expr><s-tab> pumvisible()?"\<c-p>":"\<c-d>"
 

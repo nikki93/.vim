@@ -18,7 +18,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " ----------------------------------------------------------------------------
-" bundles
+" file management
 " ----------------------------------------------------------------------------
 
 " nerdtree
@@ -40,6 +40,24 @@ nmap <Space> :CtrlP<CR>
 nmap <Leader>b :CtrlPBuffer<CR>
 nmap <Leader>t :CtrlPTag<CR>
 
+" ----------------------------------------------------------------------------
+" completion
+" ----------------------------------------------------------------------------
+
+" neocomplete
+Bundle "Shougo/neocomplete"
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
+endif
+let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
+let g:neocomplete#sources#omni#input_patterns.cs = '.*'
+let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+set completeopt+=longest
+set completeopt-=preview
+
 " youcompleteme
 "Bundle 'Valloric/YouCompleteMe'
 "let g:ycm_extra_conf_vim_data=['&filetype']
@@ -55,19 +73,69 @@ Bundle "tpope/vim-dispatch"
 " jedi-vim
 Bundle "davidhalter/jedi-vim"
 
+" vaxe
+Bundle 'jdonaldson/vaxe'
+
+" ----------------------------------------------------------------------------
+" coding
+" ----------------------------------------------------------------------------
+
+" --- completion -------------------------------------------------------------
+
+" neocomplete
+Bundle "Shougo/neocomplete"
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
+endif
+let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
+let g:neocomplete#sources#omni#input_patterns.cs = '.*'
+let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+set completeopt+=longest
+set completeopt-=preview
+
+" youcompleteme
+"Bundle 'Valloric/YouCompleteMe'
+"let g:ycm_extra_conf_vim_data=['&filetype']
+"let g:ycm_global_ycm_extra_conf='~/.vim/ycm_extra_conf.py'
+"nnoremap <C-w><C-\> :split<CR>:YcmCompleter GoToDefinitionElseDeclaration<CR>
+"nnoremap <C-\> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1 , 'cs': 1, 'ocaml': 1, 'java': 1 }
+
+" omnisharp
+Bundle "nosami/Omnisharp"
+Bundle "tpope/vim-dispatch"
+
+" jedi-vim
+Bundle "davidhalter/jedi-vim"
+
+" vaxe
+Bundle 'jdonaldson/vaxe'
+
+" --- misc. ------------------------------------------------------------------
+
 " syntastic
 Bundle 'scrooloose/syntastic'
 let g:syntastic_mode_map = { 'mode': 'active',
             \ 'passive_filetypes': ['html'] }
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_ocaml_checkers = ['merlin']
-"let g:syntastic_auto_loc_list = 1
 
 " nerdcommenter
 Bundle 'scrooloose/nerdcommenter'
 
+" ----------------------------------------------------------------------------
+" git
+" ----------------------------------------------------------------------------
+
 " gitgutter
 Bundle 'airblade/vim-gitgutter'
+
+" ----------------------------------------------------------------------------
+" misc
+" ----------------------------------------------------------------------------
 
 " latex-box
 Bundle 'LaTeX-Box-Team/LaTeX-Box'
