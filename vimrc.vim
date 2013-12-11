@@ -80,7 +80,8 @@ map <F4> :emenu <C-Z>
 
 " colorscheme (set after loading colors plugin)
 set background=dark
-colors hemisu
+let g:hybrid_use_iTerm_colors = 1
+colors hybrid
 
 " syntax
 au BufRead,BufNewFile *.as set syntax=cpp "angelscript
