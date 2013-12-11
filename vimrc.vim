@@ -19,7 +19,6 @@ source ~/.vim/plugins.vim
 
 " ui
 " set guifont=Menlo Regular:h11
-set transparency=10
 set guioptions=
 set ignorecase
 set nowrap
@@ -82,6 +81,7 @@ map <F4> :emenu <C-Z>
 set background=dark
 let g:hybrid_use_iTerm_colors = 1
 colors hybrid
+set transparency=2
 
 " syntax
 au BufRead,BufNewFile *.as set syntax=cpp "angelscript

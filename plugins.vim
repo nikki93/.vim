@@ -45,12 +45,12 @@ Bundle 'Shougo/vimproc.vim'
 Bundle 'Shougo/unite.vim'
 let g:unite_source_history_yank_enable = 1
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
-nnoremap <Space> :<C-u>Unite -no-split -buffer-name=files   -start-insert file_rec/async:!<cr>
+nnoremap <Space> :<C-u>Unite -no-split -buffer-name=files   -start-insert file_rec/async<cr>
 nnoremap ,f :<C-u>Unite -no-split -buffer-name=files   -start-insert file<cr>
 nnoremap ,r :<C-u>Unite -no-split -buffer-name=mru     -start-insert file_mru<cr>
 nnoremap ,t :<C-u>Unite -no-split -buffer-name=outline -start-insert outline<cr>
 nnoremap ,y :<C-u>Unite -no-split -buffer-name=yank    history/yank<cr>
-nnoremap ,b :<C-u>Unite -no-split -buffer-name=buffer  buffer<cr>
+nnoremap ,b :<C-u>Unite -no-split -buffer-name=buffer  -quick-match buffer<cr>
 
 " Custom mappings for the unite buffer
 autocmd FileType unite call s:unite_settings()
@@ -92,10 +92,10 @@ set completeopt+=longest
 set completeopt-=preview
 
 " clang_complete
-"Bundle "Rip-Rip/clang_complete"
-"let g:clang_library_path = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/"
-"let g:clang_complete_auto = 0
-"let g:clang_auto_select = 0
+Bundle "Rip-Rip/clang_complete"
+let g:clang_library_path = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/"
+let g:clang_complete_auto = 0
+let g:clang_auto_select = 0
 
 " omnisharp
 Bundle "nosami/Omnisharp"
