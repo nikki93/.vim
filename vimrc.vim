@@ -63,8 +63,11 @@ nnoremap <C-i> <C-o>
 nnoremap <C-o> <Tab>
 
 map <C-CR> :!urxvt &<CR><CR>
-map <F10> :make -C ./Build -j5 CXX="ccache g++" config=debug
-map <F12> :make -C ./Build -j5 CXX="ccache g++" config=release
+"map <F10> :make -C ./Build -j5 CXX="ccache g++" config=debug
+"map <F12> :make -C ./Build -j5 CXX="ccache g++" config=release
+
+map <F10> :make config=debug
+map <F12> :make config=release
 
 map <Leader>p :set tags+=~/Development/Tags/
 
