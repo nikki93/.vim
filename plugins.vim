@@ -160,6 +160,9 @@ map <silent> <Leader>ls :silent
 " vim-markdown
 Bundle 'tpope/vim-markdown'
 
+" glsl
+Bundle 'tikhomirov/vim-glsl'
+
 " exchange
 Bundle 'tommcdo/vim-exchange'
 
