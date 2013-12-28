@@ -131,8 +131,9 @@ let g:syntastic_mode_map = { 'mode': 'active',
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_ocaml_checkers = ['merlin']
 let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++ -I/usr/local/include/SDL2'
 let g:syntastic_cpp_config_file = '.clang_complete'
+let g:syntastic_c_compiler = 'clang'
+let g:syntastic_c_config_file = '.clang_complete'
 
 " nerdcommenter
 Bundle 'scrooloose/nerdcommenter'
